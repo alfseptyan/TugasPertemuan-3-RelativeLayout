@@ -1,0 +1,132 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:padding="16dp">
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:src="@drawable/baseline_arrow_back_ios_new_24"
+        android:contentDescription="Back" />
+
+    <!-- Menu Button -->
+    <ImageButton
+        android:id="@+id/btn_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:src="@drawable/baseline_more_vert_24"
+        android:contentDescription="Menu" />
+
+    <!-- Song Title -->
+    <TextView
+        android:id="@+id/tv_song_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:text="Sunset di Tanah Anarki"
+        android:textColor="#FFE135"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <!-- Album Art -->
+    <ImageView
+        android:id="@+id/iv_album_art"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/img" />
+
+    <!-- SeekBar -->
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_album_art"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:thumbTint="@color/yellow"
+        android:progressBackgroundTint="@color/yellow"/>
+
+    <!-- Band Name -->
+    <TextView
+        android:id="@+id/tv_band_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Superman is Dead"
+        android:textColor="@color/orange"
+        android:textSize="16sp"/>
+
+    <!-- Song Name -->
+    <!-- Perbaikan pada penulisan tag TextView -->
+    <TextView
+        android:id="@+id/tv_song_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_band_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:text="Sunset di Tanah Anarki"
+        android:textColor="@color/yellow"
+        android:textSize="16sp" />
+
+    <!-- Control Buttons Layout -->
+    <LinearLayout
+        android:id="@+id/layout_controls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Previous Button -->
+        <ImageButton
+            android:id="@+id/btn_previous"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/baseline_skip_previous_24"
+            android:contentDescription="Previous" />
+
+        <!-- Play Button -->
+        <ImageView
+            android:id="@+id/btn_custom_play"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/custom_button_background"
+            android:src="@drawable/baseline_play_arrow_24"
+            android:contentDescription="Custom Play Button" />
+
+        <!-- Next Button -->
+        <ImageButton
+            android:id="@+id/btn_next"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/baseline_skip_next_24"
+            android:contentDescription="Next" />
+    </LinearLayout>
+
+</RelativeLayout>
